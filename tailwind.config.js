@@ -12,8 +12,8 @@ export default {
       xl: '1440px',
     },
     colors: {
-      'white': '#1fb6ff',
-      'green': '74C69D',
+      'white': '#ffffff',
+      'primary-green': '#74C69D',
     },
     extend: {},
   },

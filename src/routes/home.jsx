@@ -1,3 +1,3 @@
 export default function Home() {
-  return <div> Home route</div>;
+  return <div className="mt-24 px-4"> Home route</div>;
 }
