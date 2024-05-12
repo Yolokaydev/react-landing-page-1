@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
+import logo from "../assets/logo.svg";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,8 +23,10 @@ const Navbar = () => {
       className={`fixed top-0 left-0 w-full h-14 bg-primary-green px-4 py-5 flex justify-between items-center z-50`}
     >
       <Link to="/">
-        {/* Replace with your logo component or image */}
-        <h1 className="text-white font-bold">Your Logo</h1>
+        <div className="flex items-center">
+          <img src={logo} alt="Your Logo" className="h-6" />
+          <h1 className="text-white text-xl font-bold ml-2">Start</h1>
+        </div>
       </Link>
       <ul className="hidden md:flex space-x-4 text-white font-medium">
         {navLinks.map((link) => (
