@@ -5,15 +5,20 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./layout/Layout"; // Assuming Layout component exists
 import Home from "./routes/home"; // Assuming Home component exists
+import Portfolio from "./routes/portfolio";
+import Services from "./routes/services";
+import Contact from "./routes/contact";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />, // Wrap routes with Layout for consistent structure
+    element: <Layout />,
     children: [
-      { path: "/", element: <Home /> }, // Home route nested within Layout
-      // Add other routes here, nested within Layout if needed for structure
-      { path: "*", element: <div>404: Not Found</div> }, // Catch-all for unmatched routes
+      { path: "/", element: <Home /> },
+      { path: "/portfolio", element: <Portfolio /> },
+      { path: "/services", element: <Services /> },
+      { path: "/contacts", element: <Contact /> },
+      { path: "*", element: <div>404: Not Found</div> },
     ],
   },
 ]);
