@@ -1,27 +1,26 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-// import App from "./App.jsx";
 import "./index.css";
+import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./layout/Layout"; // Assuming Layout component exists
-import Home from "./routes/home"; // Assuming Home component exists
-import Portfolio from "./routes/portfolio";
-import Services from "./routes/services";
-import Contact from "./routes/contact";
+import Layout from "./layout/Layout";
+import Home from "./routes/Home";
+import Portfolio from "./routes/Portfolio";
+import Services from "./routes/Services";
+import NotFound from "./routes/NotFound";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
-      { path: "/", element: <Home /> },
-      { path: "/portfolio", element: <Portfolio /> },
-      { path: "/services", element: <Services /> },
-      { path: "/contacts", element: <Contact /> },
-      { path: "*", element: <div>404: Not Found</div> },
+      { path: "portfolio", element: <Portfolio /> },
+      { path: "services", element: <Services /> },
+      { path: "*", element: <NotFound /> }, // Catch-all for 404
+      { path: "", element: <Home /> }, // Home route should be last
     ],
   },
 ]);
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />

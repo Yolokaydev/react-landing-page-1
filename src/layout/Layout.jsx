@@ -4,12 +4,9 @@ import Navbar from "../components/Navbar";
 
 export default function Layout() {
   return (
-    <div>
+    <div className="relative w-screen h-screen box-border">
       <Navbar />
-
-      <hr />
-
-      <Outlet />
+      <Outlet /> {/* Outlet for routed content */}
       <Footer />
     </div>
   );

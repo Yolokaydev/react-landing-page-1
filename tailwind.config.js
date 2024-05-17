@@ -10,6 +10,7 @@ export default {
       md: '768px',
       lg: '976px',
       xl: '1440px',
+      xlw: '1440px',
     },
     colors: {
       'white': '#ffffff',
