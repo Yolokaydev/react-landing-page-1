@@ -7,6 +7,7 @@ import Home from "./routes/Home";
 import Portfolio from "./routes/Portfolio";
 import Services from "./routes/Services";
 import NotFound from "./routes/NotFound";
+import Contact from "./routes/Contact";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     children: [
       { path: "portfolio", element: <Portfolio /> },
       { path: "services", element: <Services /> },
+      { path: "contact", element: <Contact /> },
       { path: "*", element: <NotFound /> }, // Catch-all for 404
       { path: "", element: <Home /> }, // Home route should be last
     ],

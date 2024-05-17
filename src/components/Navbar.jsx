@@ -23,12 +23,12 @@ const Navbar = () => {
       className={`fixed top-0 left-0 w-full h-14 bg-primary-green px-4 py-5 flex justify-between items-center z-50`}
     >
       <Link to="/">
-        <div className="flex items-center">
+        <div className="p-10 flex items-center">
           <img src={logo} alt="Your Logo" className="h-6" />
-          <h1 className="text-white text-xl font-bold ml-2">Start</h1>
+          <h1 className="text-white text-xl font-bold ml-2 font-sans">Start</h1>
         </div>
       </Link>
-      <ul className="hidden md:flex space-x-4 text-white font-medium">
+      <ul className="hidden md:flex space-x-6 pr-8 text-white font-medium">
         {navLinks.map((link) => (
           <li key={link.path}>
             <Link to={link.path}>{link.label}</Link>
